@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_HTML_JS</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Secular+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <b>Exercicio_HTML_JS</b>
+            </h1>
+            <h2>
+                Digite dois valores numericos nos campos abaixo seguindo as instruções:
+            </h2>
+        </header>
+        <form id="form-enviar">
+            <input type="number" name="Digite um valor" id="A" placeholder="A - Digite um valor numerico" required>
+            <input type="number" name="Digite um valor" id="B" placeholder="B - Digite um valor numerico maior que A" required>
+            <P class="erro-m">
+                Erro: O valor de B deve ser maior que o valor de A
+            </P>
+            <button type="submit">Enviar</button>
+            <p class="msg-sucesso"></p>
+        </form>
+        <script src="main.js"></script>
+    </div>    
+</body>
+</html>

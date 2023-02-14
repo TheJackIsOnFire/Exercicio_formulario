@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Epilogue', sans-serif;
+}
+
+header {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.container {
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    margin: 80px auto;
+    max-width: 800px;
+    width: 100%;
+    padding: 50px;
+    border-radius: 10px;  
+    background-color: black; 
+    border: 1px solid #aaaaaa83;
+}
+
+.container:hover {
+    background-color: rgb(12, 12, 12);
+    border: 2px solid #ffffff;
+}
+
+form {
+    margin-top: 40px;
+}
+
+input,button {
+    margin-top: 20px;
+    display: block;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    resize: none;
+    height: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+}
+
+button {
+    padding-left: 1px;
+    padding-right: 1px;
+    background: black;
+    border: 1px solid #aaa;
+    color: #fff;
+    font-size: 23px;
+    font-weight: bolder;
+    padding: 8px;
+    outline-style: none;
+    border-radius: 8px;
+    cursor: pointer;
+    /*opacity: 0.5;*/
+}
+
+button:hover {
+    background-color: rgb(112, 7, 7);
+}
+
+p.erro-m,
+p.msg-sucesso {
+    background-color: black;
+    padding: 10px;
+    margin: 15px 10px;
+    font-size: 21px;
+    font-weight: bold;
+    color:rgb(175, 96, 5);
+    text-align: center;
+    border: 3px;
+    border-style: solid;
+    border-color: rgb(175, 96, 5);
+    border-radius: 8px;
+    display: none;
+}
+
+p.msg-sucesso {
+    background-color: black;
+    color:darkgreen;
+    border-color: darkgreen;
+    font-size: 25px;
+}
+
+input.erro {
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(175, 96, 5);
+    outline-color: rgb(175, 96, 5);
+}
+
+
