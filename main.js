@@ -19,7 +19,7 @@ form.addEventListener("submit", function(e){
     const variavelB = document.getElementById("B");
     const mensagemSucesso = `Os valores (A = ${variavelA.value} / B = ${variavelB.value}) foram enviados com sucesso`;
 
-    validacao(variavelA.value, variavelB.value);
+    validacao(variavelA.valueAsNumber, variavelB.valueAsNumber);
     if (formValido == true){
         const containermensagemSucesso = document.querySelector(".msg-sucesso");
         containermensagemSucesso.innerHTML = mensagemSucesso;
