@@ -1,42 +1,34 @@
-const form = document.getElementById("form-enviar")
-let formValido = false;
+const form = document.getElementById("form-enviar");
 
 function validacao(a, b){
-    if (a < b){
-        formValido = true;
-    } else if (b == a){
-        formValido = false;
-    } else {
-        formValido = false;
-    }
-    return console.log(formValido)
+    return a < b;
 }
 
 form.addEventListener("submit", function(e){
     e.preventDefault();
 
-    const variavelA = document.getElementById("A");
-    const variavelB = document.getElementById("B");
-    const mensagemSucesso = `Os valores (A = ${variavelA.value} / B = ${variavelB.value}) foram enviados com sucesso`;
-
-    validacao(variavelA.valueAsNumber, variavelB.valueAsNumber);
-    if (formValido == true){
+    const variavelFormA = document.getElementById("Variavel-A");
+    const variavelFormB = document.getElementById("Variavel-B");
+    const mensagemSucesso = `Os valores (A = ${variavelFormA.value} / B = ${variavelFormB.value}) foram enviados com sucesso`;
+    
+    let FormValido = validacao(variavelFormA.valueAsNumber, variavelFormB.valueAsNumber)
+    if (FormValido == true){
         const containermensagemSucesso = document.querySelector(".msg-sucesso");
         containermensagemSucesso.innerHTML = mensagemSucesso;
         containermensagemSucesso.style.display = "block";
         document.querySelector(".erro-m").style.display = "none";
-        variavelA.classList.remove("erro")
-        variavelB.classList.remove("erro")
-        //variavelA.style.border = "";
-        //variavelB.style.border = "";
-        variavelA.value = "";
-        variavelB.value = ""; 
+        variavelFormA.classList.remove("erro")
+        variavelFormB.classList.remove("erro")
+        //variavelFormA.style.border = "";
+        //variavelFormB.style.border = "";
+        variavelFormA.value = "";
+        variavelFormB.value = ""; 
     } else {
         document.querySelector(".erro-m").style.display = "block";
-        variavelA.classList.add("erro")
-        variavelB.classList.add("erro")
-        //variavelA.style.border = "5px solid rgb(175, 96, 5)";
-        //variavelB.style.border = "5px solid rgb(175, 96, 5)";
+        variavelFormA.classList.add("erro")
+        variavelFormB.classList.add("erro")
+        //variavelFormA.style.border = "5px solid rgb(175, 96, 5)";
+        //variavelFormB.style.border = "5px solid rgb(175, 96, 5)";
         const containermensagemSucesso = document.querySelector(".msg-sucesso");
         containermensagemSucesso.innerHTML = mensagemSucesso;
         containermensagemSucesso.style.display = "none";
